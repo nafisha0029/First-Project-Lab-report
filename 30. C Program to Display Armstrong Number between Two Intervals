@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int L, R;
+    scanf("%d %d", &L, &R);
+
+    for(int n = L; n <= R; n++) {
+        int temp = n, digits = 0, sum = 0;
+
+        while(temp) { digits++; temp /= 10; }
+        temp = n;
+
+        while(temp) {
+            sum += pow(temp % 10, digits);
+            temp /= 10;
+        }
+
+        if(sum == n) printf("%d ", n);
+    }
+    return 0;
+}
