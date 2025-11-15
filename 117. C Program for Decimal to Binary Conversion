@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main(){
+    int n=13, i=0; char b[33]; b[32]=0;
+    for(i=31;i>=0;i--){ b[i]=(n&1)?'1':'0'; n >>=1; }
+    printf("%s\n", b);
+    return 0;
+}
