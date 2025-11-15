@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+struct Student {
+    char name[50];
+    int age;
+};
+
+int main() {
+    struct Student s = {"Nafisha", 20}, r;
+
+    FILE *f = fopen("stud.txt", "wb");
+    fwrite(&s, sizeof(s), 1, f);
+    fclose(f);
+
+    f = fopen("stud.txt", "rb");
+    fread(&r, sizeof(r), 1, f);
+    fclose(f);
+
+    printf("%s %d", r.name, r.age);
+
+    return 0;
+}
