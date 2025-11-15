@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    char c;
+    printf("Enter a character: ");
+    // read first non-whitespace char
+    if (scanf(" %c", &c) == 1)
+        printf("ASCII value of '%c' = %d\n", c, (int)c);
+    else
+        printf("Invalid input.\n");
+    return 0;
+}
