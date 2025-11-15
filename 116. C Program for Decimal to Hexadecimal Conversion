@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main(){
+    int dec=31; char buf[20];
+    sprintf(buf,"%X",dec);
+    printf("%s\n", buf);
+    return 0;
+}
