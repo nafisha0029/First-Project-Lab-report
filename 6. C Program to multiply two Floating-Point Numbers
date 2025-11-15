@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    float x, y;
+    printf("Enter two floating-point numbers: ");
+    if (scanf("%f %f", &x, &y) == 2)
+        printf("Product = %f\n", x * y);
+    else
+        printf("Invalid input.\n");
+    return 0;
+}
