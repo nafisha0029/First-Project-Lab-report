@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char dest[200]="Hello  World", src[]="Beautiful ";
+    int pos=6; // insert before index 6
+    int len=strlen(dest), sl=strlen(src);
+    memmove(dest+pos+sl, dest+pos, len-pos+1);
+    memcpy(dest+pos, src, sl);
+    printf("%s\n", dest);
+    return 0;
+}
