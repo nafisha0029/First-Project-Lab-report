@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char s[]="swiss";
+    int freq[256]={0}, i;
+    for(i=0;i<strlen(s);i++) freq[(unsigned char)s[i]]++;
+    for(i=0;i<strlen(s);i++) if(freq[(unsigned char)s[i]]==1){ printf("%c\n",s[i]); break; }
+    return 0;
+}
