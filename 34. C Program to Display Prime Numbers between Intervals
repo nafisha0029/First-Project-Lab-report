@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int L, R;
+    scanf("%d %d", &L, &R);
+
+    for(int n = L; n <= R; n++) {
+        int prime = 1;
+
+        if(n <= 1) continue;
+
+        for(int i = 2; i * i <= n; i++)
+            if(n % i == 0) prime = 0;
+
+        if(prime) printf("%d ", n);
+    }
+    return 0;
+}
