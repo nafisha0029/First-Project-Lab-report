@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main(){
+    int b = 1;
+    printf("%s\n", b? "true":"false");
+    return 0;
+}
