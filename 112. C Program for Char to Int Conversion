@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main(){
+    char c='9';
+    int x = c - '0'; // if digit
+    printf("%d\n", x);
+    return 0;
+}
