@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct Node { int data; struct Node *next; };
+struct Node* copyList(struct Node *head){
+    if(!head) return NULL;
+    struct Node *n = malloc(sizeof(*n));
+    n->data = head->data;
+    n->next = copyList(head->next);
+    return n;
+}
+void printList(struct Node *p){ while(p){ printf("%d ",p->data); p=p->next;} printf("\n"); }
+int main(){
+    struct Node *a = malloc(sizeof *a), *b = malloc(sizeof *b);
+    struct Node *c = malloc(sizeof *c);
+    a->data=1; a->next=b; b->data=2; b->next=c; c->data=3; c->next=NULL;
+    struct Node *copy = copyList(a);
+    printList(copy);
+    return 0;
+}
