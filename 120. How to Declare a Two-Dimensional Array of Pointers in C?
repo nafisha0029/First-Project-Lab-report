@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main(){
+    char *arr[3][2] = { {"one","two"}, {"three","four"}, {"five","six"} };
+    printf("%s\n", arr[1][0]); // three
+    return 0;
+}
