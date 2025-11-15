@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char a[]="abc", b[]="abd";
+    int r = strcmp(a,b);
+    if(r==0) printf("equal\n"); else if(r<0) printf("a<b\n"); else printf("a>b\n");
+    return 0;
+}
