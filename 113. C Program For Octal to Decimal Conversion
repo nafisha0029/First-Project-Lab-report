@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    char oct[]="17"; // octal 17 = decimal 15
+    int val = strtol(oct, NULL, 8);
+    printf("%d\n", val);
+    return 0;
+}
