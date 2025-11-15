@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){
+    int a[2][3]={{3,2,1},{9,7,8}}, t;
+    for(int r=0;r<2;r++){
+        for(int i=0;i<2;i++)
+            for(int j=i+1;j<3;j++)
+                if(a[r][i]>a[r][j]){
+                    t=a[r][i]; a[r][i]=a[r][j]; a[r][j]=t;
+                }
+    }
+    for(int i=0;i<2;i++){
+        for(int j=0;j<3;j++) printf("%d ", a[i][j]);
+        printf("\n");
+    }
+}
