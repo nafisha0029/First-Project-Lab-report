@@ -1,0 +1,11 @@
+#include <stdio.h>
+int *make_value(){
+    static int x = 42; // static so it remains valid
+    return &x;
+}
+int main(){ 
+    int *p = make_value(); 
+    printf("%d\n", *p); 
+    return 0; 
+    
+}
