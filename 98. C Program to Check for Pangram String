@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main(){
+    char s[]="The quick brown fox jumps over the lazy dog";
+    int seen[26]={0}, i;
+    for(i=0;i<strlen(s);i++) if(isalpha((unsigned char)s[i])) seen[tolower(s[i])-'a']=1;
+    for(i=0;i<26;i++) if(!seen[i]){ printf("Not pangram\n"); return 0;}
+    printf("Pangram\n"); return 0;
+}
