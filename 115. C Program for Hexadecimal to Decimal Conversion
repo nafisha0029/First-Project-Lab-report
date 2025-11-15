@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    char hex[]="1F";
+    int val = (int)strtol(hex,NULL,16);
+    printf("%d\n", val);
+    return 0;
+}
