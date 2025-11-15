@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char bin[]="1101";
+    int i, val=0;
+    for(i=0;i<strlen(bin);i++) val = val*2 + (bin[i]-'0');
+    printf("%d\n", val);
+    return 0;
+}
