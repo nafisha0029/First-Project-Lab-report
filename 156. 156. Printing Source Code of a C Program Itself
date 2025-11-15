@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int main() {
+    char *p = "char *p = %c%s%c; printf(p,34,p,34);";
+    printf("char *p = %c%s%c; printf(p,34,p,34);", 34, p, 34);
+    return 0;
+}
