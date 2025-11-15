@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct Distance {
+    int feet;
+    float inch;
+};
+
+int main() {
+    int n, i;
+    printf("Enter number of distances: ");
+    scanf("%d", &n);
+
+    struct Distance d[n], sum = {0, 0};
+
+    for(i = 0; i < n; i++) {
+        printf("Feet: ");
+        scanf("%d", &d[i].feet);
+        printf("Inch: ");
+        scanf("%f", &d[i].inch);
+
+        sum.feet += d[i].feet;
+        sum.inch += d[i].inch;
+    }
+
+    sum.feet += (int)(sum.inch / 12);
+    sum.inch = (int)sum.inch % 12;
+
+    printf("\nTotal Distance: %d'-%.2f\"\n", sum.feet, sum.inch);
+
+    return 0;
+}
