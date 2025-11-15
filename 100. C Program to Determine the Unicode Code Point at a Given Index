@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main(){
+    unsigned char s[]="ABC";
+    int idx=1; // zero-based
+    printf("Code point at %d = %d\n", idx, s[idx]);
+    return 0;
+}
