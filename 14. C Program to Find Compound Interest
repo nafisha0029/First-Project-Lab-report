@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double P, R;
+    int T;
+    printf("Enter principal, annual rate (%%), time (years): ");
+    if (scanf("%lf %lf %d", &P, &R, &T) != 3) return 0;
+    double A = P * pow(1 + R/100.0, T);
+    double CI = A - P;
+    printf("Amount = %.2f\nCompound Interest = %.2f\n", A, CI);
+    return 0;
+}
